@@ -12,9 +12,10 @@ alunos = [
     (5, 'Pedro', 18, 'Administração')
 ]
 
-# Use uma instrução SQL de inserção para adicionar os registros
+# Instrução SQL de inserção para adicionar os registros
 cursor.executemany('INSERT INTO alunos (id, nome, idade, curso) VALUES (?, ?, ?, ?)', alunos)
+ #ou
+ #cursor.execute('INSERT INTO alunos (id, nome, idade, curso) VALUES (6, "Otilia", "SIstemas de INformacao")')
 
-# Salva as alterações e fecha a conexão com o banco de dados
 conexao.commit()
 conexao.close

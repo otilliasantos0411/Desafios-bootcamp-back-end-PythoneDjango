@@ -18,9 +18,18 @@ cursor = conexao.cursor()
 #cursor.execute('ALTER TABLE usuario DROP COLUMN COUMN')
 
 
-#cursor.execute('INSERT INTO usuario (id, nome, endereco, email, telefone) VALUES (1, "Otilia Santos", "Sao jose", "otylyasousa@gmail.com", 123456)')
-# cursor.execute('INSERT INTO usuario (id, nome, endereco, email, telefone) VALUES (1, "Santos", "Sao jose", "otylyasousa@gmail.com", 123456)')
-# cursor.execute('INSERT INTO usuario (id, nome, endereco, email, telefone) VALUES (1, "ALmira Santos", "Sao jose", "otylyasousa@gmail.com", 123456)')
-# cursor.execute('INSERT INTO usuario (id, nome, endereco, email, telefone) VALUES (1, "Alzira Santos", "Sao jose", "otylyasousa@gmail.com", 123456)')
+# cursor.execute('INSERT INTO usuario (id, nome, endereco, email, telefone) VALUES (1, "Otilia Santos", "Sao jose", "otylyasousa@gmail.com", 123456)')
+# cursor.execute('INSERT INTO usuario (id, nome, endereco, email, telefone) VALUES (2, "Santos", "Sao jose", "otylyasousa@gmail.com", 123456)')
+# cursor.execute('INSERT INTO usuario (id, nome, endereco, email, telefone) VALUES (3, "ALmira Santos", "Sao jose", "otylyasousa@gmail.com", 123456)')
+# cursor.execute('INSERT INTO usuario (id, nome, endereco, email, telefone) VALUES (4, "Alzira Santos", "Sao jose", "otylyasousa@gmail.com", 123456)')
+
+# cursor.execute('DELETE FROM usuario where id=2')
+
+dados = cursor.execute('SELECT * FROM usuario')
+
+for usuario in dados:
+    print(usuario)
+
+
 conexao.commit()
 conexao.close
