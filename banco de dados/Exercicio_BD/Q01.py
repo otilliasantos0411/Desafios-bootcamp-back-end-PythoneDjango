@@ -1,6 +1,6 @@
 import sqlite3
 
-conexao = sqlite3.connect('teste.db')
+conexao = sqlite3.connect('banco')
 cursor = conexao.cursor()
 
 # Cria a tabela "alunos"
